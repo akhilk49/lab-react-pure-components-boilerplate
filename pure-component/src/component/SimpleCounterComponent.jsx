@@ -24,6 +24,7 @@ class SimpleCounterComponent extends Component {
 
         let { count, toggle } = this.state
         console.log(toggle)
+        console.log("This is Simple Component")
 
         var changeStyle = null;
         if(toggle){
