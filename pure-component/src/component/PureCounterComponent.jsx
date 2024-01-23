@@ -24,12 +24,36 @@ class PureCounterComponent extends PureComponent {
 
         let { count, toggle } = this.state
         console.log(toggle)
+
+        var changeStyle = null;
+        if(toggle){
+            changeStyle ={
+                backgroundColor : "green"
+            }
+        }else{
+            changeStyle ={
+                backgroundColor : "red"
+            }
+        }
+
+        var changeButtonStyle = null;
+
+        if(toggle){
+            changeButtonStyle ={
+                cursor : "pointer"
+            }
+        }else{
+            changeButtonStyle ={
+                cursor : "not-allowed"
+            }
+        }
+
         return (
             <>
             <h1>pure component</h1>
                 <h3>count : {count}</h3>
-                <button onClick={this.toggling}>Set toggle</button>
-                <button onClick={this.incrementCount}>counter</button>
+                <button style={changeStyle} onClick={this.toggling}>Set toggle</button>
+                <button style={changeButtonStyle} onClick={this.incrementCount}>counter</button>
 
             </>
         )
